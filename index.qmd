@@ -1,5 +1,5 @@
 ---
-title: "hemanthkr.github.io"
+title: "Blogs"
 listing:
   contents: posts
   sort: "date desc"
