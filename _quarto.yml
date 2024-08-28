@@ -1,8 +1,10 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "hemanthkr.github.io"
+  site-url: https://hemanthkr.github.io
   navbar:
     right:
       - about.qmd
