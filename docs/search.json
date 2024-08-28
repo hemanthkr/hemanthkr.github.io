@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "hemanthkr.github.io",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nAug 28, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nAug 25, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nAug 28, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nAug 25, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\n\n\n\n\n\n\nNew Post\n\n\n\n\n\n\nnonsense\n\n\ncode\n\n\n\nA nice new post\n\n\n\n\n\nJul 12, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -26,5 +26,19 @@
     "title": "Post With Code",
     "section": "",
     "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/new-post/new-post.html",
+    "href": "posts/new-post/new-post.html",
+    "title": "New Post",
+    "section": "",
+    "text": "Here is some lovely text and an equation.\n\\[ a^2 + b^2 = c^2 \\]\nHere’s a list.\n\na link to an external website.\na link to another post in this blog.\n\n\nprint('Hello, Quarto!')\n\nHello, Quarto!\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.arange(10)\ny = 2 * x + 1\nplt.plot(x, y)\n\n\n\n\nThis is my lovely line plot"
+  },
+  {
+    "objectID": "posts/new-post/new-post.html#a-nice-heading",
+    "href": "posts/new-post/new-post.html#a-nice-heading",
+    "title": "New Post",
+    "section": "",
+    "text": "Here is some lovely text and an equation.\n\\[ a^2 + b^2 = c^2 \\]\nHere’s a list.\n\na link to an external website.\na link to another post in this blog.\n\n\nprint('Hello, Quarto!')\n\nHello, Quarto!\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.arange(10)\ny = 2 * x + 1\nplt.plot(x, y)\n\n\n\n\nThis is my lovely line plot"
   }
 ]
