@@ -16,7 +16,7 @@ website:
         href: https://www.linkedin.com/in/hemanth-kr/
 format:
   html:
-    theme: cosmo
+    theme: sandstone
     css: styles.css
 
 
