@@ -32,7 +32,14 @@
     "href": "posts/decision-trees/decision trees.html#model-training",
     "title": "Decision Trees",
     "section": "Model Training",
-    "text": "Model Training\n\nfrom sklearn.tree import DecisionTreeClassifier, export_graphviz\n\ndt = DecisionTreeClassifier(max_depth=3)\ndt.fit(x_train, y_train)\n\nmetrics.mean_absolute_error(y_test, dt.predict(x_test))\n\n0.18834080717488788\n\n\n\nimport graphviz, re\n\ndef draw_tree(t, df, size=10, ratio=0.6, precision=2, **kwargs):\n    s=export_graphviz(t, out_file=None, feature_names=df.columns, filled=True, rounded=True,\n                      special_characters=True, rotate=False, precision=precision, **kwargs)\n    return graphviz.Source(re.sub('Tree {', f'Tree {{ size={size}; ratio={ratio}', s))\n\ndraw_tree(dt, x_train)\n\n# source: fastai\n\n\n\n\nSource fastai"
+    "text": "Model Training\n\nfrom sklearn.tree import DecisionTreeClassifier, export_graphviz\n\ndt = DecisionTreeClassifier(max_depth=3)\ndt.fit(x_train, y_train)\n\nmetrics.mean_absolute_error(y_test, dt.predict(x_test))\n\n0.18834080717488788\n\n\n\nimport graphviz, re\n\ndef draw_tree(t, df, size=10, ratio=0.6, precision=2, **kwargs):\n    s=export_graphviz(t, out_file=None, feature_names=df.columns, filled=True, rounded=True,\n                      special_characters=True, rotate=False, precision=precision, **kwargs)\n    return graphviz.Source(re.sub('Tree {', f'Tree {{ size={size}; ratio={ratio}', s))\n\ndraw_tree(dt, x_train)\n\n# source: fastai\n\n\n\n\nSource fastai\n\n\n\n\n\nGini Impurity\nThe Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was labeled according to the distribution of labels in the subset. It is used to measure the probability of misclassification of a randomly chosen element.\nThe value of Gini impurity can range between 0 and 0.5. Lower the value, the better the split. Here’s the formula:\n\\[Gini = 1 - \\sum_{i=1}^{n} p_{i}^{2}\\]"
+  },
+  {
+    "objectID": "posts/decision-trees/decision trees.html#final-thoughts",
+    "href": "posts/decision-trees/decision trees.html#final-thoughts",
+    "title": "Decision Trees",
+    "section": "Final thoughts",
+    "text": "Final thoughts\nDecision trees are a simple yet powerful algorithm. They are easy to interpret and visualize. They are also very fast to train and predict. For most tabular datasets, an ensemble of decision trees can give good results. Exploring Random Forests and Gradient boosted trees is a good next step."
   },
   {
     "objectID": "about.html",
