@@ -6,6 +6,7 @@ website:
   title: "Hemanth's LogBook"
   site-url: https://hemanthkr.github.io
   navbar:
+    background: "#007399"
     right:
       - about.qmd
       - icon: github
