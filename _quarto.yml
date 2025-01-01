@@ -7,6 +7,7 @@ website:
   site-url: https://hemanthkr.github.io
   navbar:
     background: "#007399"
+    foreground: "#FFFFFF"
     right:
       - about.qmd
       - icon: github
