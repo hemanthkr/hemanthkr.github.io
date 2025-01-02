@@ -1,45 +1,45 @@
 [
   {
-    "objectID": "posts/decision-trees/decision trees.html",
-    "href": "posts/decision-trees/decision trees.html",
-    "title": "Decision Trees",
+    "objectID": "posts/vision/computer-vision.html",
+    "href": "posts/vision/computer-vision.html",
+    "title": "Computer Vision | Log #001",
     "section": "",
-    "text": "A decision tree is a supervised learning method which can be used for both classification and regression problems. In this blog, we’ll explore how a decision tree works and what are some of the key steps involved in building a decision tree.\nThe algorithm works by recursively splitting data based on the most informative features, creating a flowchart like structure to make predictions or decisions based on the input. They are highly interpretable and can be used across various fields due to their ability to handle various types of data (numerical, categorical, etc.) with minimal data preparation.\nDecision trees can also be used to understand complex relationships in the data. This is due to the non-parametric approach that doesn’t make assumptions about the underlying data distributions. I find it easier to think of it in this way, the relationship between input and target variable is not assumed. The user is not required to specify the type of relationship in advance, allowing the decision tree to capture non-linear and complex interactions between input features and target values."
+    "text": "Computer Vision refers to teaching machines to understand and extract information from images and video. There has been research dating back to 1960s to extract contextual information from a visual input and it is a good read for those who are interested. For now let’s stick to understanding the modern approach that started with the breakthrough in 2012. AlexNet introduced in 2012 used Convolutional Neural Networks to solve image recognition with a significantly higher accuracy."
   },
   {
-    "objectID": "posts/decision-trees/decision trees.html#how-it-works",
-    "href": "posts/decision-trees/decision trees.html#how-it-works",
-    "title": "Decision Trees",
-    "section": "How it works",
-    "text": "How it works\nWe will get into splitting criteria and stopping criteria, but before that let’s go through an exercise of what a decision tree is doing.\nThe basic steps involved in building a decision tree are:\n\nIn the beginning the dataset is split into subsets, by selecting the best feature to split on using metrics like Gini Impurity or Information Gain.\nEach child node now represents a subset of data that is split on the selected feature value.\nThis process is repeated on each child node until the stopping criteria like maximum depth or maximum samples in the same group is met.\nFor classification the leaf node will have the majority class in it, for regression the leaf node will have the mean of the target values in the same group."
+    "objectID": "posts/vision/computer-vision.html#introduction",
+    "href": "posts/vision/computer-vision.html#introduction",
+    "title": "Computer Vision | Log #001",
+    "section": "",
+    "text": "Computer Vision refers to teaching machines to understand and extract information from images and video. There has been research dating back to 1960s to extract contextual information from a visual input and it is a good read for those who are interested. For now let’s stick to understanding the modern approach that started with the breakthrough in 2012. AlexNet introduced in 2012 used Convolutional Neural Networks to solve image recognition with a significantly higher accuracy."
   },
   {
-    "objectID": "posts/decision-trees/decision trees.html#implementation",
-    "href": "posts/decision-trees/decision trees.html#implementation",
-    "title": "Decision Trees",
-    "section": "Implementation",
-    "text": "Implementation\nWe will implement a decision tree with the help of scikit-learn library for the Titanic dataset. Let’s dive into it.\n\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn import metrics\nimport pandas as pd\nimport numpy as np\n\n# Load the dataset\ndf = pd.read_csv(\"train.csv\")\ndf.head()\n\n\n\n\n\n\n\n\nPassengerId\nSurvived\nPclass\nName\nSex\nAge\nSibSp\nParch\nTicket\nFare\nCabin\nEmbarked\n\n\n\n\n0\n1\n0\n3\nBraund, Mr. Owen Harris\nmale\n22.0\n1\n0\nA/5 21171\n7.2500\nNaN\nS\n\n\n1\n2\n1\n1\nCumings, Mrs. John Bradley (Florence Briggs Th...\nfemale\n38.0\n1\n0\nPC 17599\n71.2833\nC85\nC\n\n\n2\n3\n1\n3\nHeikkinen, Miss. Laina\nfemale\n26.0\n0\n0\nSTON/O2. 3101282\n7.9250\nNaN\nS\n\n\n3\n4\n1\n1\nFutrelle, Mrs. Jacques Heath (Lily May Peel)\nfemale\n35.0\n1\n0\n113803\n53.1000\nC123\nS\n\n\n4\n5\n0\n3\nAllen, Mr. William Henry\nmale\n35.0\n0\n0\n373450\n8.0500\nNaN\nS"
+    "objectID": "posts/vision/computer-vision.html#computer-vision-vs-image-processing",
+    "href": "posts/vision/computer-vision.html#computer-vision-vs-image-processing",
+    "title": "Computer Vision | Log #001",
+    "section": "Computer Vision vs Image Processing",
+    "text": "Computer Vision vs Image Processing\nBut before we get ahead of ourself, let’s understand what is the difference between traditional image processing and computer vision. Although they are related fields they differ in their approach and objectives.\n\n\n\n\n\n\nImage Processing\n\nPixel level operations to manipulate and enhance images\nFiltering, color adjustments, transformations\nWorks at lower level of abstraction with pixel-level features\nDoes not involve learning from data and less demanding\n\n\n\nComputer Vision\n\nAnalysing image content and extract meaningful insights\nObject Recognition, Segmentation, Tracking\nHigher level of abstraction, analyzing contents of the image\nLearning features and patterns from datasets and requires large resources"
   },
   {
-    "objectID": "posts/decision-trees/decision trees.html#data-cleanup",
-    "href": "posts/decision-trees/decision trees.html#data-cleanup",
-    "title": "Decision Trees",
-    "section": "Data Cleanup",
-    "text": "Data Cleanup\n\nFind and replace the missing values in the dataset with the mode of the column.\n\n\nmodes = df.mode().iloc[0]\ndf.fillna(modes, inplace=True)\ndf.isna().sum()\n\nPassengerId    0\nSurvived       0\nPclass         0\nName           0\nSex            0\nAge            0\nSibSp          0\nParch          0\nTicket         0\nFare           0\nCabin          0\nEmbarked       0\ndtype: int64\n\n\n\nTake logp1 of the Fare column as it has a long tail distribution.\n\n\ndf.Fare.hist()\n\n\n\n\n\n\n\n\n\ndf.Fare = np.log1p(df.Fare)\ndf.Fare.hist()\n\n\n\n\n\n\n\n\n\nConvert the categorical columns to numerical columns.\nThis is done by collecting the unique values of the column and assigning them a numerical index. Now we can replace the categorical values with the unique index values.\n\n\ndef conv_cat_cols(df, col):\n    df[col] = pd.Categorical(df[col])\n    df[col] = df[col].cat.codes\n    return df\n\nconv_cat_cols(df, 'Sex')\nconv_cat_cols(df, 'Embarked')\n\ndf.head()\n\n\n\n\n\n\n\n\nPassengerId\nSurvived\nPclass\nName\nSex\nAge\nSibSp\nParch\nTicket\nFare\nCabin\nEmbarked\n\n\n\n\n0\n1\n0\n3\nBraund, Mr. Owen Harris\n1\n22.0\n1\n0\nA/5 21171\n2.110213\nB96 B98\n2\n\n\n1\n2\n1\n1\nCumings, Mrs. John Bradley (Florence Briggs Th...\n0\n38.0\n1\n0\nPC 17599\n4.280593\nC85\n0\n\n\n2\n3\n1\n3\nHeikkinen, Miss. Laina\n0\n26.0\n0\n0\nSTON/O2. 3101282\n2.188856\nB96 B98\n2\n\n\n3\n4\n1\n1\nFutrelle, Mrs. Jacques Heath (Lily May Peel)\n0\n35.0\n1\n0\n113803\n3.990834\nC123\n2\n\n\n4\n5\n0\n3\nAllen, Mr. William Henry\n1\n35.0\n0\n0\n373450\n2.202765\nB96 B98\n2\n\n\n\n\n\n\n\n\ncols = ['Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked']\nx = df[cols].copy()\ny = df.Survived\n\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25, random_state=24)"
+    "objectID": "posts/vision/computer-vision.html#applications",
+    "href": "posts/vision/computer-vision.html#applications",
+    "title": "Computer Vision | Log #001",
+    "section": "Applications",
+    "text": "Applications\nSome of the main applications of computer vision are as follows:\n\nImage Classification\nObject Detection\nSemantic Segmentation\nInstance Segmentation\nPose Estimation\nFace and Person Recognition\nImage Restoration"
   },
   {
-    "objectID": "posts/decision-trees/decision trees.html#model-training",
-    "href": "posts/decision-trees/decision trees.html#model-training",
-    "title": "Decision Trees",
-    "section": "Model Training",
-    "text": "Model Training\n\nfrom sklearn.tree import DecisionTreeClassifier, export_graphviz\n\ndt = DecisionTreeClassifier(max_depth=3)\ndt.fit(x_train, y_train)\n\nmetrics.mean_absolute_error(y_test, dt.predict(x_test))\n\n0.18834080717488788\n\n\n\nimport graphviz, re\n\ndef draw_tree(t, df, size=10, ratio=0.6, precision=2, **kwargs):\n    s=export_graphviz(t, out_file=None, feature_names=df.columns, filled=True, rounded=True,\n                      special_characters=True, rotate=False, precision=precision, **kwargs)\n    return graphviz.Source(re.sub('Tree {', f'Tree {{ size={size}; ratio={ratio}', s))\n\ndraw_tree(dt, x_train)\n\n# source: fastai\n\n\n\n\nSource fastai\n\n\n\n\n\nGini Impurity\nThe Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was labeled according to the distribution of labels in the subset. It is used to measure the probability of misclassification of a randomly chosen element.\nThe value of Gini impurity can range between 0 and 0.5. Lower the value, the better the split. Here’s the formula:\n\\[Gini = 1 - \\sum_{i=1}^{n} p_{i}^{2}\\]"
+    "objectID": "posts/vision/computer-vision.html#challenges",
+    "href": "posts/vision/computer-vision.html#challenges",
+    "title": "Computer Vision | Log #001",
+    "section": "Challenges",
+    "text": "Challenges\nThere are many challenges in computer vision that we are yet to overcome such as accuiring accurate large datasets that are labelled, removing bias in datasets, choosing the right architecture for a model, real-time processing and optimizing the computational requirements, etc.\nWe will work on getting a deeper understanding into this field in the future blogs."
   },
   {
-    "objectID": "posts/decision-trees/decision trees.html#final-thoughts",
-    "href": "posts/decision-trees/decision trees.html#final-thoughts",
-    "title": "Decision Trees",
-    "section": "Final thoughts",
-    "text": "Final thoughts\nDecision trees are a simple yet powerful algorithm. They are easy to interpret and visualize. They are also very fast to train and predict. For most tabular datasets, an ensemble of decision trees can give good results. Exploring Random Forests and Gradient boosted trees is a good next step."
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blogs",
+    "section": "",
+    "text": "Computer Vision | Log #001\n\n\n\n\n\n\nVision\n\n\n\nAn introduction\n\n\n\n\n\nJan 1, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -47,12 +47,5 @@
     "title": "About",
     "section": "",
     "text": "I am a Data Scientist with over 5 years of experience in software engineering and have worked in a variety of roles, including Data Engineering, Sofware Development and Machine Learning.\nI like to dive deep into topics that peak my interest and this blog will be a place to share my learnings. I was inspired from this blog by Dr. Rachel Thomas from FastAI to start documenting my learning. Here are some of my favorite parts of the blog:\n\nThe top advice I would give my younger self would be to start blogging sooner.\n\n\nHelps you learn. Organizing knowledge always helps me synthesize my own ideas. One of the tests of whether you understand something is whether you can explain it to someone else. A blog post is a great way to do that.\n\n\nYou are best positioned to help people one step behind you.\n\nI am hoping that this blog will keep me disciplined when the discomfort of learning new things becomes real."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blogs",
-    "section": "",
-    "text": "Decision Trees\n\n\n\n\n\n\nSupervised\n\n\n\nA detailed explanation of how the algorithm works\n\n\n\n\n\nSep 7, 2024\n\n\nHemanth K. Ramu\n\n\n\n\n\n\nNo matching items"
   }
 ]
