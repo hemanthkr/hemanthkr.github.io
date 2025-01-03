@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Hemanth KR">
+<meta name="dcterms.date" content="2025-01-02">
+<meta name="description" content="What is an image ?">
 
-<title>Blogs – Hemanth’s LogBook</title>
+<title>Understanding Images as Data | Log #002 – Hemanth’s LogBook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4bee6fc6d037ccf5a2ba8f415b2a1020.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4bee6fc6d037ccf5a2ba8f415b2a1020.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,83 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-<style>
-
-      .quarto-title-block .quarto-title-banner {
-        background: #007399;
-      }
-</style>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Hemanth’s LogBook</span>
     </a>
   </div>
@@ -155,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -183,110 +120,77 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blogs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Understanding Images as Data | Log #002</h1>
+                  <div>
+        <div class="description">
+          What is an image ?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Vision</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Hemanth KR </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 2, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VmlzaW9u">Vision <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>An image is a grid of tiny squares called pixels. Each pixel is a single point of colour in the image. The resolution of an image is basically group of pixels arranged in a grid format. <em>n x n</em> is basically the number of pixels in an image represented as <em>n</em> rows and columns.</p>
+</section>
+<section id="representation-of-color-spaces" class="level2">
+<h2 class="anchored" data-anchor-id="representation-of-color-spaces">Representation of Color Spaces</h2>
+<p>Images are described in different color spaces. We will only look at some important ways to represent images that are useful for machine learning tasks.</p>
+<ol class="example" type="1">
+<li><h4 id="rgb-red-green-blue" class="anchored">RGB (Red, Green, Blue)</h4>
+<p>RBG is the most common way to store pixel values. Each pixel contains 3 numbers between the values of 0-255. For example, red would be (255, 0, 0).</p></li>
+<li><h4 id="grayscale" class="anchored">Grayscale</h4>
+<p>Grayscale images are represented using a single number per pixel between 0-255. 0 represents black, 255 represents white and the values in between are different shades of grey.</p></li>
+<li><h4 id="hsv-hue-saturation-value" class="anchored">HSV (Hue, Saturation, Value)</h4>
+<p>HSV separates the color and intensity information in a way that’s more intuitive. There are many formats that are used to represent HSV, the standard format is as follows:</p>
+<ul>
+<li>Hue - ranges from 0<sup>o</sup> to 360<sup>o</sup> and represents the color type</li>
+<li>Saturation - ranges from 0% (no color, grayscale) - 100% (pure color) and represents the intensity of the color</li>
+<li>Value - ranges from 0% - 100% and represents the brightness of the color</li>
+</ul></li>
+</ol>
+<p>In the interest of keeping these blogs short, we will stop here and discuss diffent ways of image manipulation in the next ones.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="VmlzaW9u" data-listing-date-sort="1735776000000" data-listing-file-modified-sort="1735935428282" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
-<div class="thumbnail">
-<p><a href="./posts/vision/02-understanding-images-as-data.html" class="no-external"></a></p><a href="./posts/vision/02-understanding-images-as-data.html" class="no-external">
-<p><img loading="lazy" src="./posts/vision/thumbnails/002.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/vision/02-understanding-images-as-data.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/vision/02-understanding-images-as-data.html" class="no-external">Understanding Images as Data | Log #002</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/vision/02-understanding-images-as-data.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('VmlzaW9u'); return false;">
-Vision
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/vision/02-understanding-images-as-data.html" class="no-external">What is an image ?</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/vision/02-understanding-images-as-data.html" class="no-external">
-<div class="listing-date">
-Jan 2, 2025
-</div>
-<div class="listing-author">
-Hemanth KR
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="VmlzaW9u" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1735859859067" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="257">
-<div class="thumbnail">
-<p><a href="./posts/vision/01-computer-vision.html" class="no-external"></a></p><a href="./posts/vision/01-computer-vision.html" class="no-external">
-<p><img loading="lazy" src="./posts/vision/thumbnails/001.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/vision/01-computer-vision.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/vision/01-computer-vision.html" class="no-external">Computer Vision | Log #001</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/vision/01-computer-vision.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('VmlzaW9u'); return false;">
-Vision
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/vision/01-computer-vision.html" class="no-external">An introduction to CV</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/vision/01-computer-vision.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2025
-</div>
-<div class="listing-author">
-Hemanth KR
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "posts/vision/02-understanding-images-as-data.html",
+    "href": "posts/vision/02-understanding-images-as-data.html",
+    "title": "Understanding Images as Data | Log #002",
+    "section": "",
+    "text": "An image is a grid of tiny squares called pixels. Each pixel is a single point of colour in the image. The resolution of an image is basically group of pixels arranged in a grid format. n x n is basically the number of pixels in an image represented as n rows and columns."
+  },
+  {
+    "objectID": "posts/vision/02-understanding-images-as-data.html#introduction",
+    "href": "posts/vision/02-understanding-images-as-data.html#introduction",
+    "title": "Understanding Images as Data | Log #002",
+    "section": "",
+    "text": "An image is a grid of tiny squares called pixels. Each pixel is a single point of colour in the image. The resolution of an image is basically group of pixels arranged in a grid format. n x n is basically the number of pixels in an image represented as n rows and columns."
+  },
+  {
+    "objectID": "posts/vision/02-understanding-images-as-data.html#representation-of-color-spaces",
+    "href": "posts/vision/02-understanding-images-as-data.html#representation-of-color-spaces",
+    "title": "Understanding Images as Data | Log #002",
+    "section": "Representation of Color Spaces",
+    "text": "Representation of Color Spaces\nImages are described in different color spaces. We will only look at some important ways to represent images that are useful for machine learning tasks.\n\nRGB (Red, Green, Blue)\nRBG is the most common way to store pixel values. Each pixel contains 3 numbers between the values of 0-255. For example, red would be (255, 0, 0).\nGrayscale\nGrayscale images are represented using a single number per pixel between 0-255. 0 represents black, 255 represents white and the values in between are different shades of grey.\nHSV (Hue, Saturation, Value)\nHSV separates the color and intensity information in a way that’s more intuitive. There are many formats that are used to represent HSV, the standard format is as follows:\n\nHue - ranges from 0o to 360o and represents the color type\nSaturation - ranges from 0% (no color, grayscale) - 100% (pure color) and represents the intensity of the color\nValue - ranges from 0% - 100% and represents the brightness of the color\n\n\nIn the interest of keeping these blogs short, we will stop here and discuss diffent ways of image manipulation in the next ones."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -11,39 +32,39 @@
     "href": "index.html",
     "title": "Blogs",
     "section": "",
-    "text": "Computer Vision | Log #001\n\n\n\n\n\n\nVision\n\n\n\nAn introduction to CV\n\n\n\n\n\nJan 1, 2025\n\n\nHemanth KR\n\n\n\n\n\n\nNo matching items"
+    "text": "Understanding Images as Data | Log #002\n\n\n\n\n\n\nVision\n\n\n\nWhat is an image ?\n\n\n\n\n\nJan 2, 2025\n\n\nHemanth KR\n\n\n\n\n\n\n\n\n\n\n\n\nComputer Vision | Log #001\n\n\n\n\n\n\nVision\n\n\n\nAn introduction to CV\n\n\n\n\n\nJan 1, 2025\n\n\nHemanth KR\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/vision/computer-vision.html",
-    "href": "posts/vision/computer-vision.html",
+    "objectID": "posts/vision/01-computer-vision.html",
+    "href": "posts/vision/01-computer-vision.html",
     "title": "Computer Vision | Log #001",
     "section": "",
     "text": "Computer Vision refers to teaching machines to understand and extract information from images and video. There has been research dating back to 1960s to extract contextual information from a visual input and it is a good read for those who are interested. For now let’s stick to understanding the modern approach that started with the breakthrough in 2012. AlexNet introduced in 2012 used Convolutional Neural Networks to solve image recognition with a significantly higher accuracy."
   },
   {
-    "objectID": "posts/vision/computer-vision.html#introduction",
-    "href": "posts/vision/computer-vision.html#introduction",
+    "objectID": "posts/vision/01-computer-vision.html#introduction",
+    "href": "posts/vision/01-computer-vision.html#introduction",
     "title": "Computer Vision | Log #001",
     "section": "",
     "text": "Computer Vision refers to teaching machines to understand and extract information from images and video. There has been research dating back to 1960s to extract contextual information from a visual input and it is a good read for those who are interested. For now let’s stick to understanding the modern approach that started with the breakthrough in 2012. AlexNet introduced in 2012 used Convolutional Neural Networks to solve image recognition with a significantly higher accuracy."
   },
   {
-    "objectID": "posts/vision/computer-vision.html#computer-vision-vs-image-processing",
-    "href": "posts/vision/computer-vision.html#computer-vision-vs-image-processing",
+    "objectID": "posts/vision/01-computer-vision.html#computer-vision-vs-image-processing",
+    "href": "posts/vision/01-computer-vision.html#computer-vision-vs-image-processing",
     "title": "Computer Vision | Log #001",
     "section": "Computer Vision vs Image Processing",
     "text": "Computer Vision vs Image Processing\nBut before we get ahead of ourself, let’s understand what is the difference between traditional image processing and computer vision. Although they are related fields they differ in their approach and objectives.\n\n\n\n\n\n\nImage Processing\n\nPixel level operations to manipulate and enhance images\nFiltering, color adjustments, transformations\nWorks at lower level of abstraction with pixel-level features\nDoes not involve learning from data and less demanding\n\n\n\nComputer Vision\n\nAnalysing image content and extract meaningful insights\nObject Recognition, Segmentation, Tracking\nHigher level of abstraction, analyzing contents of the image\nLearning features and patterns from datasets and requires large resources"
   },
   {
-    "objectID": "posts/vision/computer-vision.html#applications",
-    "href": "posts/vision/computer-vision.html#applications",
+    "objectID": "posts/vision/01-computer-vision.html#applications",
+    "href": "posts/vision/01-computer-vision.html#applications",
     "title": "Computer Vision | Log #001",
     "section": "Applications",
     "text": "Applications\nSome of the main applications of computer vision are as follows:\n\nImage Classification\nObject Detection\nSemantic Segmentation\nInstance Segmentation\nPose Estimation\nFace and Person Recognition\nImage Restoration"
   },
   {
-    "objectID": "posts/vision/computer-vision.html#challenges",
-    "href": "posts/vision/computer-vision.html#challenges",
+    "objectID": "posts/vision/01-computer-vision.html#challenges",
+    "href": "posts/vision/01-computer-vision.html#challenges",
     "title": "Computer Vision | Log #001",
     "section": "Challenges",
     "text": "Challenges\nThere are many challenges in computer vision that we are yet to overcome such as accuiring accurate large datasets that are labelled, removing bias in datasets, choosing the right architecture for a model, real-time processing and optimizing the computational requirements, etc.\nWe will work on getting a deeper understanding into this field in the future blogs."
