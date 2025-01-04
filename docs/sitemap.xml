@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hemanthkr.github.io/posts/vision/02-understanding-images-as-data.html</loc>
-    <lastmod>2025-01-03T20:17:08.282Z</lastmod>
+    <loc>https://hemanthkr.github.io/posts/vision/03-image-augmentations.html</loc>
+    <lastmod>2025-01-04T21:02:00.854Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hemanthkr.github.io/posts/vision/01-computer-vision.html</loc>
+    <lastmod>2025-01-02T23:17:39.067Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hemanthkr.github.io/index.html</loc>
+    <lastmod>2025-01-04T15:35:34.895Z</lastmod>
   </url>
   <url>
     <loc>https://hemanthkr.github.io/about.html</loc>
     <lastmod>2025-01-01T21:30:02.980Z</lastmod>
   </url>
   <url>
-    <loc>https://hemanthkr.github.io/index.html</loc>
-    <lastmod>2025-01-02T23:16:16.667Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hemanthkr.github.io/posts/vision/01-computer-vision.html</loc>
-    <lastmod>2025-01-02T23:17:39.067Z</lastmod>
+    <loc>https://hemanthkr.github.io/posts/vision/02-understanding-images-as-data.html</loc>
+    <lastmod>2025-01-03T20:17:08.282Z</lastmod>
   </url>
 </urlset>

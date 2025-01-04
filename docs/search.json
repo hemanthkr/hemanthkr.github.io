@@ -1,38 +1,24 @@
 [
   {
-    "objectID": "posts/vision/02-understanding-images-as-data.html",
-    "href": "posts/vision/02-understanding-images-as-data.html",
-    "title": "Understanding Images as Data | Log #002",
+    "objectID": "posts/vision/03-image-augmentations.html",
+    "href": "posts/vision/03-image-augmentations.html",
+    "title": "Image Augmentation | Log #003",
     "section": "",
-    "text": "An image is a grid of tiny squares called pixels. Each pixel is a single point of colour in the image. The resolution of an image is basically group of pixels arranged in a grid format. n x n is basically the number of pixels in an image represented as n rows and columns."
+    "text": "Image augmentation techniques are very useful in various computer vision tasks. They are used to achieve several objectives like improving model performance, expanding limited datasets, etc. Let’s look at how this is achieved before looking at types of augmentations."
   },
   {
-    "objectID": "posts/vision/02-understanding-images-as-data.html#introduction",
-    "href": "posts/vision/02-understanding-images-as-data.html#introduction",
-    "title": "Understanding Images as Data | Log #002",
-    "section": "",
-    "text": "An image is a grid of tiny squares called pixels. Each pixel is a single point of colour in the image. The resolution of an image is basically group of pixels arranged in a grid format. n x n is basically the number of pixels in an image represented as n rows and columns."
+    "objectID": "posts/vision/03-image-augmentations.html#reasons-to-augment",
+    "href": "posts/vision/03-image-augmentations.html#reasons-to-augment",
+    "title": "Image Augmentation | Log #003",
+    "section": "Reasons to Augment",
+    "text": "Reasons to Augment\n\nPrevent overfitting - By creating variations of original images, the model gets exposed to wider reange of possible inputs, making it more generalizable.\nExpanding Datasets - When working with small datasets, augmentation can increase the size of the training data. This is useful in deep learning as models generally need a large amount of data to perform better.\nReal-world challenges - Image recognition task often face challenges like occulusion, light intensity and different angles. This can be introduced to the model at training stages with augmentation so the model can learn to perform under difficulties.\n\nWhile this is benificial, the effectiveness of image augmentation should be carefully chosen depending on the specific task. It could potentially reduce the model performance in some cases when the image augmentation technique is not selected appropriately."
   },
   {
-    "objectID": "posts/vision/02-understanding-images-as-data.html#representation-of-color-spaces",
-    "href": "posts/vision/02-understanding-images-as-data.html#representation-of-color-spaces",
-    "title": "Understanding Images as Data | Log #002",
-    "section": "Representation of Color Spaces",
-    "text": "Representation of Color Spaces\nImages are described in different color spaces. We will only look at some important ways to represent images that are useful for machine learning tasks.\n\nRGB (Red, Green, Blue)\nRBG is the most common way to store pixel values. Each pixel contains 3 numbers between the values of 0-255. For example, red would be (255, 0, 0).\nGrayscale\nGrayscale images are represented using a single number per pixel between 0-255. 0 represents black, 255 represents white and the values in between are different shades of grey.\nHSV (Hue, Saturation, Value)\nHSV separates the color and intensity information in a way that’s more intuitive. There are many formats that are used to represent HSV, the standard format is as follows:\n\nHue - ranges from 0o to 360o and represents the color type\nSaturation - ranges from 0% (no color, grayscale) - 100% (pure color) and represents the intensity of the color\nValue - ranges from 0% - 100% and represents the brightness of the color\n\n\nIn the interest of keeping these blogs short, we will stop here and discuss diffent ways of image manipulation in the next ones."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I am a Data Scientist with over 5 years of experience in software engineering and have worked in a variety of roles, including Data Engineering, Sofware Development and Machine Learning.\nI like to dive deep into topics that peak my interest and this blog will be a place to share my learnings. I was inspired from this blog by Dr. Rachel Thomas from FastAI to start documenting my learning. Here are some of my favorite parts of the blog:\n\nThe top advice I would give my younger self would be to start blogging sooner.\n\n\nHelps you learn. Organizing knowledge always helps me synthesize my own ideas. One of the tests of whether you understand something is whether you can explain it to someone else. A blog post is a great way to do that.\n\n\nYou are best positioned to help people one step behind you.\n\nI am hoping that this blog will keep me disciplined when the discomfort of learning new things becomes real."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blogs",
-    "section": "",
-    "text": "Understanding Images as Data | Log #002\n\n\n\n\n\n\nVision\n\n\n\nWhat is an image ?\n\n\n\n\n\nJan 2, 2025\n\n\nHemanth KR\n\n\n\n\n\n\n\n\n\n\n\n\nComputer Vision | Log #001\n\n\n\n\n\n\nVision\n\n\n\nAn introduction to CV\n\n\n\n\n\nJan 1, 2025\n\n\nHemanth KR\n\n\n\n\n\n\nNo matching items"
+    "objectID": "posts/vision/03-image-augmentations.html#types-of-augmentation",
+    "href": "posts/vision/03-image-augmentations.html#types-of-augmentation",
+    "title": "Image Augmentation | Log #003",
+    "section": "Types of Augmentation",
+    "text": "Types of Augmentation\nCommon image augmentation techniques are as follows:\n\nHorizontal and vertical flipping, rotating by various angles, increasing or decreasing image size, random selection and resizing portions of the image, randomly altering color channels, converting to grayscale, applying Gaussian noise, blurring techniques and so on.\n\nThere are many ways to implement these techniques, I am going to be using PyTorch to show a few methods.\nfrom torchvision import transforms\n\n# Resize an image\nresize = transforms.Resize((32, 32))\nresized_img = resize(img)\n\n# Rotate an image\nrotate = transforms.RandomRotation(degrees=90)\nrotated_img = rotate(img)\nWe can also chain multiple transforms in PyTorch and apply it to our DataLoader class.\nfrom torchvision import transforms\n\ntransform = transforms.Compose([\n    transforms.Resize(256),\n    transforms.CenterCrop(224),\n    transforms.RandomHorizontalFlip(p=0.5),\n    transforms.ToTensor()\n])\nIn the above example we have chained the transforms using Compose and converted the image to a PyTorch tensor to prepare the image data in a PyTorch optimized format to ensure compatability.\nIn the next blog we’ll look at Neural Networks and how they learn using this image data."
   },
   {
     "objectID": "posts/vision/01-computer-vision.html",
@@ -68,5 +54,40 @@
     "title": "Computer Vision | Log #001",
     "section": "Challenges",
     "text": "Challenges\nThere are many challenges in computer vision that we are yet to overcome such as accuiring accurate large datasets that are labelled, removing bias in datasets, choosing the right architecture for a model, real-time processing and optimizing the computational requirements, etc.\nWe will work on getting a deeper understanding into this field in the future blogs."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blogs",
+    "section": "",
+    "text": "Image Augmentation | Log #003\n\n\n\nVision\n\n\n\nResize, Crop, Rotate, Flip…\n\n\n\nHemanth KR\n\n\nJan 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding Images as Data | Log #002\n\n\n\nVision\n\n\n\nWhat is an image ?\n\n\n\nHemanth KR\n\n\nJan 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputer Vision | Log #001\n\n\n\nVision\n\n\n\nAn introduction to CV\n\n\n\nHemanth KR\n\n\nJan 1, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am a Data Scientist with over 5 years of experience in software engineering and have worked in a variety of roles, including Data Engineering, Sofware Development and Machine Learning.\nI like to dive deep into topics that peak my interest and this blog will be a place to share my learnings. I was inspired from this blog by Dr. Rachel Thomas from FastAI to start documenting my learning. Here are some of my favorite parts of the blog:\n\nThe top advice I would give my younger self would be to start blogging sooner.\n\n\nHelps you learn. Organizing knowledge always helps me synthesize my own ideas. One of the tests of whether you understand something is whether you can explain it to someone else. A blog post is a great way to do that.\n\n\nYou are best positioned to help people one step behind you.\n\nI am hoping that this blog will keep me disciplined when the discomfort of learning new things becomes real."
+  },
+  {
+    "objectID": "posts/vision/02-understanding-images-as-data.html",
+    "href": "posts/vision/02-understanding-images-as-data.html",
+    "title": "Understanding Images as Data | Log #002",
+    "section": "",
+    "text": "An image is a grid of tiny squares called pixels. Each pixel is a single point of colour in the image. The resolution of an image is basically group of pixels arranged in a grid format. n x n is basically the number of pixels in an image represented as n rows and columns."
+  },
+  {
+    "objectID": "posts/vision/02-understanding-images-as-data.html#introduction",
+    "href": "posts/vision/02-understanding-images-as-data.html#introduction",
+    "title": "Understanding Images as Data | Log #002",
+    "section": "",
+    "text": "An image is a grid of tiny squares called pixels. Each pixel is a single point of colour in the image. The resolution of an image is basically group of pixels arranged in a grid format. n x n is basically the number of pixels in an image represented as n rows and columns."
+  },
+  {
+    "objectID": "posts/vision/02-understanding-images-as-data.html#representation-of-color-spaces",
+    "href": "posts/vision/02-understanding-images-as-data.html#representation-of-color-spaces",
+    "title": "Understanding Images as Data | Log #002",
+    "section": "Representation of Color Spaces",
+    "text": "Representation of Color Spaces\nImages are described in different color spaces. We will only look at some important ways to represent images that are useful for machine learning tasks.\n\nRGB (Red, Green, Blue)\nRBG is the most common way to store pixel values. Each pixel contains 3 numbers between the values of 0-255. For example, red would be (255, 0, 0).\nGrayscale\nGrayscale images are represented using a single number per pixel between 0-255. 0 represents black, 255 represents white and the values in between are different shades of grey.\nHSV (Hue, Saturation, Value)\nHSV separates the color and intensity information in a way that’s more intuitive. There are many formats that are used to represent HSV, the standard format is as follows:\n\nHue - ranges from 0o to 360o and represents the color type\nSaturation - ranges from 0% (no color, grayscale) - 100% (pure color) and represents the intensity of the color\nValue - ranges from 0% - 100% and represents the brightness of the color\n\n\nIn the interest of keeping these blogs short, we will stop here and discuss diffent ways of image manipulation in the next ones."
   }
 ]

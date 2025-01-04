@@ -3,7 +3,8 @@ title: "Blogs"
 listing:
   contents: posts
   sort: "date desc"
-  type: default
+  type: grid
+  image-height: 300px
   categories: true
   sort-ui: false
   filter-ui: false
