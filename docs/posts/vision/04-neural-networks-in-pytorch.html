@@ -267,8 +267,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now that we have a model, let’s define a loss function and an optimizer which will help us train the model.</p>
-<p>Loss function simply measures the difference between the predicted output value and the actual target value. This loss is what we need to minimize during training.</p>
-<p>Optimizer is defined as the process of reducing the model error step by step during training. And there are many ways to implement this. This is how our model is learning to perform better. In a training loop, we call the optimizer to replace the gradients of model paramenters using backpropagation. We will look into these algorithms in depth separately.</p>
+<p><strong>Loss function</strong> simply measures the difference between the predicted output value and the actual target value. This loss is what we need to minimize during training.</p>
+<p><strong>Optimizer</strong> is defined as the process of reducing the model error step by step during training. And there are many ways to implement this. This is how our model is learning to perform better. In a training loop, we call the optimizer to replace the gradients of model paramenters using backpropagation. We will look into these algorithms in depth separately.</p>
 <div id="cell-10" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>loss_fn <span class="op">=</span> nn.CrossEntropyLoss()</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.SGD(model.parameters(), lr<span class="op">=</span><span class="fl">1e-3</span>)</span>

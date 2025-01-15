@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "posts/vision/05-back-propagation.html",
+    "href": "posts/vision/05-back-propagation.html",
+    "title": "Backpropagation | Log #005",
+    "section": "",
+    "text": "Previously, we saw how to build a neural network that does image classification. Before we explore different neural network architectures and types of problems in computer vision, let’s spend some time understanding how the neural network actually learns.\nFrom my limited understanding, arguably the most important algorithm that we have come up with throughout history could be Backpropagation. Without the ability to learn non-linear properties from a dataset efficiently, neural networks might not have been so useful to us. So understanding it very crucial."
+  },
+  {
+    "objectID": "posts/vision/05-back-propagation.html#introduction",
+    "href": "posts/vision/05-back-propagation.html#introduction",
+    "title": "Backpropagation | Log #005",
+    "section": "",
+    "text": "Previously, we saw how to build a neural network that does image classification. Before we explore different neural network architectures and types of problems in computer vision, let’s spend some time understanding how the neural network actually learns.\nFrom my limited understanding, arguably the most important algorithm that we have come up with throughout history could be Backpropagation. Without the ability to learn non-linear properties from a dataset efficiently, neural networks might not have been so useful to us. So understanding it very crucial."
+  },
+  {
+    "objectID": "posts/vision/05-back-propagation.html#implementation",
+    "href": "posts/vision/05-back-propagation.html#implementation",
+    "title": "Backpropagation | Log #005",
+    "section": "Implementation",
+    "text": "Implementation\nThe core of backpropagation involves calculating the partial derivative of the cost function C with respect to each weight w in the network:\n\\(∂C/∂w\\)​\nThis gradient tells us how much a small change in each weight affects the overall error.\nDuring the neural network’s training process, the algorithm has two phases:\n\nForward Pass: Input data is passed through the network. As the data passes through the layers, each neuron will apply their weights, biases and activation functions. The ouput is produced depending on the final layer activation functions of the neurons.\nBackward Pass: The error between the desired output and network’s output is calculated using the loss function. This error is propagated backwards through the network layer by layer. Using the chain rule, the gradients of the error for each weight is calculated. And finally weights are updated based on these gradients and a learning rate.\n\nThis whole process is repeated multiple times which is called epochs."
+  },
+  {
+    "objectID": "posts/vision/05-back-propagation.html#key-takeaways",
+    "href": "posts/vision/05-back-propagation.html#key-takeaways",
+    "title": "Backpropagation | Log #005",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\nKey thing to note here is that the weights are updated using an optimization algorithm called gradient descent. There are many ways to implement this depending on the type of problem and dataset size. And there are also many types of loss functions and activation functions. These are crutial to understanding the architecture of a Neural Network. We will look at all these functions in the upcoming blogs."
+  },
+  {
     "objectID": "posts/vision/03-image-augmentations.html",
     "href": "posts/vision/03-image-augmentations.html",
     "title": "Image Augmentation | Log #003",
@@ -60,7 +88,7 @@
     "href": "index.html",
     "title": "Blogs",
     "section": "",
-    "text": "Neural Networks in PyTorch | Log #004\n\n\n\nVision\n\n\nPyTorch\n\n\n\nLet’s build a simple NN in PyTorch\n\n\n\nHemanth KR\n\n\nJan 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImage Augmentation | Log #003\n\n\n\nVision\n\n\n\nResize, Crop, Rotate, Flip…\n\n\n\nHemanth KR\n\n\nJan 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding Images as Data | Log #002\n\n\n\nVision\n\n\n\nWhat is an image ?\n\n\n\nHemanth KR\n\n\nJan 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputer Vision | Log #001\n\n\n\nVision\n\n\n\nAn introduction to CV\n\n\n\nHemanth KR\n\n\nJan 1, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Backpropagation | Log #005\n\n\n\nVision\n\n\n\nHow does the NN learn ?\n\n\n\nHemanth KR\n\n\nJan 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeural Networks in PyTorch | Log #004\n\n\n\nVision\n\n\nPyTorch\n\n\n\nLet’s build a simple NN in PyTorch\n\n\n\nHemanth KR\n\n\nJan 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImage Augmentation | Log #003\n\n\n\nVision\n\n\n\nResize, Crop, Rotate, Flip…\n\n\n\nHemanth KR\n\n\nJan 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding Images as Data | Log #002\n\n\n\nVision\n\n\n\nWhat is an image ?\n\n\n\nHemanth KR\n\n\nJan 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputer Vision | Log #001\n\n\n\nVision\n\n\n\nAn introduction to CV\n\n\n\nHemanth KR\n\n\nJan 1, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
