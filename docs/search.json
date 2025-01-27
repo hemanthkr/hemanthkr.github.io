@@ -131,5 +131,33 @@
     "title": "Backpropagation | Log #005",
     "section": "Key Takeaways",
     "text": "Key Takeaways\nKey thing to note here is that the weights are updated using an optimization algorithm called gradient descent. There are many ways to implement this depending on the type of problem and dataset size. And there are also many types of loss functions and activation functions. These are crutial to understanding the architecture of a Neural Network. We will look at all these functions in the upcoming blogs."
+  },
+  {
+    "objectID": "posts/vision/06-activation-to-optimization.html",
+    "href": "posts/vision/06-activation-to-optimization.html",
+    "title": "Activation to Optimization | Log #006",
+    "section": "",
+    "text": "An activation function is applied to the output of a neuron in a network. It introduces non-linearity which enables the network to model complex data distributions and learn features. There are many activation functions and the choice is always dependant on the type of problem and dataset available. We will only look at the most commonly used activation functions which should give us a good understanding.\n\nRectified Linear Unit (ReLU)\nFormula: \\(f(x) = max(0, x)\\)\nHyperbolic Tangent (Tanh)\nFormula: \\[f(x) = tanh(x) = \\frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\\]"
+  },
+  {
+    "objectID": "posts/vision/06-activation-to-optimization.html#activation-functions",
+    "href": "posts/vision/06-activation-to-optimization.html#activation-functions",
+    "title": "Activation to Optimization | Log #006",
+    "section": "",
+    "text": "An activation function is applied to the output of a neuron in a network. It introduces non-linearity which enables the network to model complex data distributions and learn features. There are many activation functions and the choice is always dependant on the type of problem and dataset available. We will only look at the most commonly used activation functions which should give us a good understanding.\n\nRectified Linear Unit (ReLU)\nFormula: \\(f(x) = max(0, x)\\)\nHyperbolic Tangent (Tanh)\nFormula: \\[f(x) = tanh(x) = \\frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\\]"
+  },
+  {
+    "objectID": "posts/vision/06-activation-to-optimization.html#loss-functions",
+    "href": "posts/vision/06-activation-to-optimization.html#loss-functions",
+    "title": "Activation to Optimization | Log #006",
+    "section": "Loss Functions",
+    "text": "Loss Functions"
+  },
+  {
+    "objectID": "posts/vision/06-activation-to-optimization.html#gradient-descent-algorithms",
+    "href": "posts/vision/06-activation-to-optimization.html#gradient-descent-algorithms",
+    "title": "Activation to Optimization | Log #006",
+    "section": "Gradient Descent Algorithms",
+    "text": "Gradient Descent Algorithms\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define activation functions\ndef relu(x):\n    return np.maximum(0, x)\n\ndef sigmoid(x):\n    return 1 / (1 + np.exp(-x))\n\ndef tanh(x):\n    return np.tanh(x)\n\ndef softmax(x):\n    exp_x = np.exp(x - np.max(x))  # Subtract max for numerical stability\n    return exp_x / exp_x.sum(axis=0)\n\ndef gaussian(x, c=0, sigma=1):\n    return np.exp(-((x - c)**2) / (2 * sigma**2))\n\n# Generate input values\nx = np.linspace(-10, 10, 500)\n\n# Compute activation function outputs\ny_relu = relu(x)\ny_sigmoid = sigmoid(x)\ny_tanh = tanh(x)\ny_softmax = softmax(x)  # Softmax is typically applied to vectors\ny_gaussian = gaussian(x)\n\n# Plot the activation functions\nplt.figure(figsize=(12, 8))\n\nplt.subplot(2, 3, 1)\nplt.plot(x, y_relu, label=\"ReLU\")\nplt.title(\"ReLU\")\nplt.grid()\n\nplt.subplot(2, 3, 2)\nplt.plot(x, y_sigmoid, label=\"Sigmoid\")\nplt.title(\"Sigmoid\")\nplt.grid()\n\nplt.subplot(2, 3, 3)\nplt.plot(x, y_tanh, label=\"Tanh\")\nplt.title(\"Tanh\")\nplt.grid()\n\nplt.subplot(2, 3, 4)\nplt.plot(x, y_softmax, label=\"Softmax\")\nplt.title(\"Softmax\")\nplt.grid()\n\nplt.subplot(2, 3, 5)\nplt.plot(x, y_gaussian, label=\"Gaussian\")\nplt.title(\"Gaussian\")\nplt.grid()\n\nplt.tight_layout()\nplt.show()"
   }
 ]
