@@ -137,14 +137,14 @@
     "href": "posts/vision/06-activation-to-optimization.html",
     "title": "Activation to Optimization | Log #006",
     "section": "",
-    "text": "An activation function is applied to the output of a neuron in a network. It introduces non-linearity which enables the network to model complex data distributions and learn features. There are many activation functions and the choice is always dependant on the type of problem and dataset available. We will only look at the most commonly used activation functions which should give us a good understanding.\n\nRectified Linear Unit (ReLU)\nFormula: \\(f(x) = max(0, x)\\)\nHyperbolic Tangent (Tanh)\nFormula: \\[f(x) = tanh(x) = \\frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\\]"
+    "text": "An activation function is applied to the output of a neuron in a network. It introduces non-linearity which enables the network to model complex data distributions and learn features. There are many activation functions and the choice is always dependant on the type of problem and dataset available. We will only look at the most commonly used activation functions which should give us a good understanding.\n\nRectified Linear Unit (ReLU)\nFormula: \\[f(x) = max(0, x)\\]\nHyperbolic Tangent (Tanh)\nFormula: \\[f(x) = tanh(x) = \\frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\\]\nSigmoid\nFormula: \\[f(x) = \\frac{1}{1 + e^{-x}}\\]\nSoftmax\nFormula: \\[f(x_i) = \\frac{e^{x_i}}{\\sum_{j=1}^{n}e^{x_j}}\\]"
   },
   {
     "objectID": "posts/vision/06-activation-to-optimization.html#activation-functions",
     "href": "posts/vision/06-activation-to-optimization.html#activation-functions",
     "title": "Activation to Optimization | Log #006",
     "section": "",
-    "text": "An activation function is applied to the output of a neuron in a network. It introduces non-linearity which enables the network to model complex data distributions and learn features. There are many activation functions and the choice is always dependant on the type of problem and dataset available. We will only look at the most commonly used activation functions which should give us a good understanding.\n\nRectified Linear Unit (ReLU)\nFormula: \\(f(x) = max(0, x)\\)\nHyperbolic Tangent (Tanh)\nFormula: \\[f(x) = tanh(x) = \\frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\\]"
+    "text": "An activation function is applied to the output of a neuron in a network. It introduces non-linearity which enables the network to model complex data distributions and learn features. There are many activation functions and the choice is always dependant on the type of problem and dataset available. We will only look at the most commonly used activation functions which should give us a good understanding.\n\nRectified Linear Unit (ReLU)\nFormula: \\[f(x) = max(0, x)\\]\nHyperbolic Tangent (Tanh)\nFormula: \\[f(x) = tanh(x) = \\frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\\]\nSigmoid\nFormula: \\[f(x) = \\frac{1}{1 + e^{-x}}\\]\nSoftmax\nFormula: \\[f(x_i) = \\frac{e^{x_i}}{\\sum_{j=1}^{n}e^{x_j}}\\]"
   },
   {
     "objectID": "posts/vision/06-activation-to-optimization.html#loss-functions",

@@ -234,9 +234,13 @@ window.Quarto = {
 <p>An activation function is applied to the output of a neuron in a network. It introduces non-linearity which enables the network to model complex data distributions and learn features. There are many activation functions and the choice is always dependant on the type of problem and dataset available. We will only look at the most commonly used activation functions which should give us a good understanding.</p>
 <ol class="example" type="1">
 <li><p>Rectified Linear Unit (ReLU)</p>
-<p>Formula: <span class="math inline">\(f(x) = max(0, x)\)</span></p></li>
+<p>Formula: <span class="math display">\[f(x) = max(0, x)\]</span></p></li>
 <li><p>Hyperbolic Tangent (Tanh)</p>
 <p>Formula: <span class="math display">\[f(x) = tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\]</span></p></li>
+<li><p>Sigmoid</p>
+<p>Formula: <span class="math display">\[f(x) = \frac{1}{1 + e^{-x}}\]</span></p></li>
+<li><p>Softmax</p>
+<p>Formula: <span class="math display">\[f(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{n}e^{x_j}}\]</span></p></li>
 </ol>
 </section>
 <section id="loss-functions" class="level2">
