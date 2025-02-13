@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/vision/07-activation-to-optimization-02.html",
       "/posts/vision/06-activation-to-optimization-01.html",
       "/posts/vision/05-back-propagation.html",
       "/posts/vision/04-neural-networks-in-pytorch.html",

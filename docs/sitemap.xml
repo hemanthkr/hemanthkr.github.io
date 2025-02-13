@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hemanthkr.github.io/posts/vision/06-activation-to-optimization-01.html</loc>
-    <lastmod>2025-01-28T19:53:29.603Z</lastmod>
+    <lastmod>2025-01-29T16:26:25.881Z</lastmod>
   </url>
   <url>
     <loc>https://hemanthkr.github.io/posts/vision/04-neural-networks-in-pytorch.html</loc>
@@ -31,5 +31,9 @@
   <url>
     <loc>https://hemanthkr.github.io/posts/vision/05-back-propagation.html</loc>
     <lastmod>2025-01-20T13:24:57.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hemanthkr.github.io/posts/vision/07-activation-to-optimization-02.html</loc>
+    <lastmod>2025-02-13T10:39:58.587Z</lastmod>
   </url>
 </urlset>

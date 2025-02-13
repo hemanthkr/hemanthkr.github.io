@@ -60,7 +60,7 @@
     "href": "index.html",
     "title": "Blogs",
     "section": "",
-    "text": "Activation to Optimization - Part 1 | Log #006\n\n\n\nVision\n\n\n\nUnderstanding the building blocks of neural networks\n\n\n\nHemanth KR\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBackpropagation | Log #005\n\n\n\nVision\n\n\n\nHow does the NN learn ?\n\n\n\nHemanth KR\n\n\nJan 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeural Networks in PyTorch | Log #004\n\n\n\nVision\n\n\nPyTorch\n\n\n\nLet’s build a simple NN in PyTorch\n\n\n\nHemanth KR\n\n\nJan 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImage Augmentation | Log #003\n\n\n\nVision\n\n\n\nResize, Crop, Rotate, Flip…\n\n\n\nHemanth KR\n\n\nJan 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding Images as Data | Log #002\n\n\n\nVision\n\n\n\nWhat is an image ?\n\n\n\nHemanth KR\n\n\nJan 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputer Vision | Log #001\n\n\n\nVision\n\n\n\nAn introduction to CV\n\n\n\nHemanth KR\n\n\nJan 1, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Activation to Optimization - Part 2 | Log #007\n\n\n\nVision\n\n\n\nUnderstanding the building blocks of neural networks\n\n\n\nHemanth KR\n\n\nJan 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nActivation to Optimization - Part 1 | Log #006\n\n\n\nVision\n\n\n\nUnderstanding the building blocks of neural networks\n\n\n\nHemanth KR\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBackpropagation | Log #005\n\n\n\nVision\n\n\n\nHow does the NN learn ?\n\n\n\nHemanth KR\n\n\nJan 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeural Networks in PyTorch | Log #004\n\n\n\nVision\n\n\nPyTorch\n\n\n\nLet’s build a simple NN in PyTorch\n\n\n\nHemanth KR\n\n\nJan 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImage Augmentation | Log #003\n\n\n\nVision\n\n\n\nResize, Crop, Rotate, Flip…\n\n\n\nHemanth KR\n\n\nJan 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding Images as Data | Log #002\n\n\n\nVision\n\n\n\nWhat is an image ?\n\n\n\nHemanth KR\n\n\nJan 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputer Vision | Log #001\n\n\n\nVision\n\n\n\nAn introduction to CV\n\n\n\nHemanth KR\n\n\nJan 1, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/vision/01-computer-vision.html",
@@ -145,5 +145,40 @@
     "title": "Backpropagation | Log #005",
     "section": "Key Takeaways",
     "text": "Key Takeaways\nKey thing to note here is that the weights are updated using an optimization algorithm called gradient descent. There are many ways to implement this depending on the type of problem and dataset size. And there are also many types of loss functions and activation functions. These are crutial to understanding the architecture of a Neural Network. We will look at all these functions in the upcoming blogs."
+  },
+  {
+    "objectID": "posts/vision/07-activation-to-optimization-02.html",
+    "href": "posts/vision/07-activation-to-optimization-02.html",
+    "title": "Activation to Optimization - Part 2 | Log #007",
+    "section": "",
+    "text": "Loss functions in deep learning are used to quantify how the model is performing. It calculates the error between model’s predicted values and the actual target values. The aim is to improve the model’s performance by adjusting the parameters in the direction that minimizes the loss and improves predictive accuracy. Broadly there are two main types of loss functions - Regression Loss functions and Classification Loss functions."
+  },
+  {
+    "objectID": "posts/vision/07-activation-to-optimization-02.html#loss-functions",
+    "href": "posts/vision/07-activation-to-optimization-02.html#loss-functions",
+    "title": "Activation to Optimization - Part 2 | Log #007",
+    "section": "",
+    "text": "Loss functions in deep learning are used to quantify how the model is performing. It calculates the error between model’s predicted values and the actual target values. The aim is to improve the model’s performance by adjusting the parameters in the direction that minimizes the loss and improves predictive accuracy. Broadly there are two main types of loss functions - Regression Loss functions and Classification Loss functions."
+  },
+  {
+    "objectID": "posts/vision/07-activation-to-optimization-02.html#regression-loss-functions",
+    "href": "posts/vision/07-activation-to-optimization-02.html#regression-loss-functions",
+    "title": "Activation to Optimization - Part 2 | Log #007",
+    "section": "Regression Loss Functions",
+    "text": "Regression Loss Functions\n\nMean Absolute Error (MAE) - Measures the absolute difference between the predicted and actual values. Also known as L1 loss. Robust to outliers. Not differentiable at zero causing difficulties during optimisations.\n\\[MAE = \\frac{\\sum_{i=1}^{n} |y_i - \\hat{y_i}|}{n}\\]\nMean Squared Error (MSE) - Measures the average squared difference between predicted and actual values. Also known as L2 loss. More sensitive to outliers. Differentiable everywhere making it easier for optimisation algorithms like gradient descent.\n\\[MSE = \\frac{\\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2}{n}\\]\nHuber Loss - Huber loss combines the benifits of MSE and MAE. Less sensitive to outliers than MSE and differentiable everywhere unlike MAE. Extremely useful when the data contains noise.\n\\[L_\\delta(y, \\hat{y}) = \\begin{cases}\n                             \\frac{1}{2}(y - \\hat{y})^2 & \\text{for } |y - \\hat{y}| \\leq \\delta \\\\\n                             \\delta|y - \\hat{y}| - \\frac{1}{2}\\delta^2 & \\text{otherwise}\n                          \\end{cases}\\]"
+  },
+  {
+    "objectID": "posts/vision/07-activation-to-optimization-02.html#classification-loss-functions",
+    "href": "posts/vision/07-activation-to-optimization-02.html#classification-loss-functions",
+    "title": "Activation to Optimization - Part 2 | Log #007",
+    "section": "Classification Loss Functions",
+    "text": "Classification Loss Functions\n\nBinary Cross-Entropy Loss - Measures the performance of a classification model whose output is a probability value between 0 and 1. Also known as Log Loss used for binary classification problems.\n\\[BCE = -\\frac{1}{N}\\sum_{i=1}^{N} [y_i \\log(\\hat{y}_i) + (1-y_i)\\log(1-\\hat{y}_i)]\\]\nCategorical Cross-Entropy Loss - Used for multi-class classification problems. Measures the performance of a classification model whose output is a probability disctribution over multiple classes.\n\\[CCE = -\\frac{1}{N}\\sum_{i=1}^{N}\\sum_{j=1}^{C} y_{ij}\\log(\\hat{y}_{ij})\\]"
+  },
+  {
+    "objectID": "posts/vision/07-activation-to-optimization-02.html#conclusion",
+    "href": "posts/vision/07-activation-to-optimization-02.html#conclusion",
+    "title": "Activation to Optimization - Part 2 | Log #007",
+    "section": "Conclusion",
+    "text": "Conclusion\nLoss functions play a crucial role in training neural networks by providing a quantitative measure of how well the model is performing. They act as a compass, guiding the optimization process by indicating how far the model’s predictions deviate from the actual values. The choice of loss function depends on the specific problem type - regression loss functions like MAE, MSE, and Huber Loss are used for continuous value predictions, while classification loss functions like Binary and Categorical Cross-Entropy are used for discrete class predictions.\nUnderstanding these loss functions is essential as they directly impact model training and performance. Each loss function has its own characteristics - some are more robust to outliers, some provide better gradients for optimization, and others are specifically designed for certain types of problems. By choosing the appropriate loss function and understanding its properties, we can effectively train neural networks to achieve optimal performance on our specific tasks. The next blog will complete this series by looking at different types of activation functions."
   }
 ]
